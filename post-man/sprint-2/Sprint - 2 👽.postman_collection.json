@@ -1,0 +1,1237 @@
+{
+	"info": {
+		"_postman_id": "c608eb5e-4506-420e-a27d-2feb30459978",
+		"name": "Sprint - 2 👽",
+		"description": "# 📄 Get started here\n\nThis template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n## 🔖 How to use this template\n\n- Replace the content given brackets (()) with your API's details.\n    \n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n    \n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n    \n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n    \n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30363068",
+		"_collection_link": "https://hotel-abp1-g1.postman.co/workspace/ABP1-HOTEL~20cc75c3-5389-4f3b-b5f7-52ad82c5e837/collection/38376095-c608eb5e-4506-420e-a27d-2feb30459978?action=share&source=collection_link&creator=30363068"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"login"
+							]
+						},
+						"description": "# Login POST\n\n## 1. Configuración de la Solicitud POST\n- **Método**: POST\n- **URL**: `http://localhost:8080/test/login`\n- **Descripción**: Esta solicitud envía dos parámetros, `username` y `password`, que se imprimen en la consola del servidor.\n\n---\n\n## 2. Crear la Solicitud en Postman\n\n1. Abre **Postman**.\n2. Haz clic en **Añadir petición** y selecciona el método **POST** en la carpeta correspondiente.\n3. Ingresa la URL: `http://localhost:8080/test/login`.\n4. Ve a la pestaña **Body** y selecciona **x-www-form-urlencoded**.\n5. Añade los siguientes parámetros:\n   - **Key**: `username`, **Value**: `gusgonza`\n   - **Key**: `password`, **Value**: `root`\n6. Guarda la petición.\n\n---\n\n## 3. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará los parámetros y los imprimirá en la consola del servidor.\n- En la consola del servidor aparecerán los mensajes:\n\n```shell\nResultado del login: ✅ Usuario y password Correcto\n```\n\n\no \n\n```shell\nResultado del login: ❌ Usuario Incorrecto\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "The `/me` endpoints let you manage information about the authenticated user."
+		},
+		{
+			"name": "Actividades",
+			"item": [
+				{
+					"name": "CreateActividad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "insert",
+									"type": "text"
+								},
+								{
+									"key": "nombre_actividad",
+									"value": "Clase de Cocina Local",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Aprende a cocinar los platos típicos de la región con un chef local.",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "30.00",
+									"type": "text"
+								},
+								{
+									"key": "cupo",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "fecha_actividad",
+									"value": "2024-10-18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							]
+						},
+						"description": "# Actividades POST-INSERT\n\n## 1\\. Configuración de la Solicitud POST-INSERT\n\n- **Método**: POST\n    \n- **URL**: `http://localhost:8080/hotel/actividades`\n    \n- **Descripción**: Esta solicitud insert una actividad desde el servidor mediante un `action`.\n    \n\n---\n\n## 2\\. Crear la Solicitud en Postman\n\n1. Abre **Postman**.\n    \n2. Haz clic en **Añadir petición** y selecciona el método **POST** en la carpeta correspondiente con el metodo correspondiente, `CreateActividad`.\n    \n3. Ingresa la URL: `http://localhost:8080/hotel/actividades`.\n    \n4. Es necesario agregar un body y seleccionar `x-www-form-urlencoded`.\n    \n5. Agregamos los campos necesarios para hecer el inser, además del campo de `action` y el de tipo `insert`.\n    \n6. Guarda la petición.\n    \n\n---\n\n## 3\\. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará el insert de la actividade y las imprimirá en la consola de Intellij el mensaje.\n    \n- En la consola del servidor aparecerán los mensajes por ejemplo:\n    \n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 12:32:38 - servlet.ActividadesServlet.doPost]: \n✅ Actividad insertada correctamente\n 🚀🛸  || 🚧🛠️\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```\n\no\n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 12:34:15 - servlet.ActividadesServlet.doPost]: \n❌ ERROR CONEXION CON BBDD\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadActividad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						},
+						"description": "# Actividades GET\n\n## 1\\. Configuración de la Solicitud GET\n\n- **Método**: GET\n    \n- **URL**: `http://localhost:8080/hotel/actividades`\n    \n- **Descripción**: Esta solicitud recupera una lista de actividades desde el servidor, que se imprimen en la consola del servidor.\n    \n\n---\n\n## 2\\. Crear la Solicitud en Postman\n\n1. Abre **Postman**.\n    \n2. Haz clic en **Añadir petición** y selecciona el método **GET** en la carpeta correspondiente.\n    \n3. Ingresa la URL: `http://localhost:8080/hotel/actividades`.\n    \n4. No es necesario agregar un body, ya que es una solicitud GET.\n    \n5. En caso de enviar un ID en a la pestaña **Params** y añade el siguiente parámetro:\n    \n    - **Key** : `id`\n        \n    - **Value** : El ID de la actividad que deseas consultar (por ejemplo, `1`).\n        \n6. Guarda la petición.\n    \n\n---\n\n## 3\\. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará la recuperación de las actividades y las imprimirá en la consola del servidor.\n    \n- En la consola del servidor aparecerán los mensajes por ejemplo:\n    \n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-07 19:50:45 - service.ActividadesService.getActividades]: \nActividadModel(id_actividad=2, nombre_actividad=Cata de vinos, descripcion=DegustaciÃ³n de una selecciÃ³n de vinos locales., imagen=null, precio=50.0, cupo=5, fecha_actividad=2024-10-03)\n 🚀🛸  || 🚧🛠️\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```\n\no\n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-07 19:34:17 - service.ActividadesService.getActividades]: \n❌ ID FUERA DE RANGO\n 🚀🛸  || 🚧🛠️\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateActividad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "nombre_actividad",
+									"value": "test update",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "sin servicio",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "00.00",
+									"type": "text"
+								},
+								{
+									"key": "cupo",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "fecha_registro",
+									"value": "2024-10-9",
+									"type": "text"
+								},
+								{
+									"key": "id_actividad",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							]
+						},
+						"description": "# Actividades POST-UPDATE\n\n## 1\\. Configuración de la Solicitud POST-UPDATE\n\n- **Método**: POST\n    \n- **URL**: `http://localhost:8080/hotel/actividades`\n    \n- **Descripción**: Esta solicitud actualiza una actividad desde el servidor mediante un ```action```.\n    \n\n---\n\n## 2\\. Crear la Solicitud en Postman\n\n1. Abre **Postman**.\n    \n2. Haz clic en **Añadir petición** y selecciona el método **POST** en la carpeta correspondiente con el metodo correspondiente, ```CreateActividad```.\n    \n3. Ingresa la URL: `http://localhost:8080/hotel/actividades`.\n    \n4. Es necesario agregar un body y seleccionar ```x-www-form-urlencoded```.\n    \n5. Agregamos los campos necesarios para hecer el update, además del campo de ```action``` y el de tipo ```update```.\n        \n6. Guarda la petición.\n    \n\n---\n\n## 3\\. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará el insert de la actividade y las imprimirá en la consola de Intellij el mensaje.   \n- En la consola del servidor aparecerán los mensajes por ejemplo:\n    \n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 12:56:56 - servlet.ActividadesServlet.doPost]: \n \n✅ Actividad actualizada correctamente\n \n 🚀🛸  || 🚧🛠️\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```\n\no\n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 12:57:33 - servlet.ActividadesServlet.doPost]: \n \n❌ El ID de la actividad no existe.\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteActividad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "delete",
+									"type": "text"
+								},
+								{
+									"key": "id_actividad",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							]
+						},
+						"description": "# Actividades POST-DELETE\n\n## 1\\. Configuración de la Solicitud POST-DELETE\n\n- **Método**: POST\n    \n- **URL**: `http://localhost:8080/hotel/actividades`\n    \n- **Descripción**: Esta solicitud elimina una actividad por ID desde el servidor mediante un ```action```.\n    \n\n---\n\n## 2\\. Crear la Solicitud en Postman\n\n1. Abre **Postman**.\n    \n2. Haz clic en **Añadir petición** y selecciona el método **POST** en la carpeta correspondiente con el metodo correspondiente, ```CreateActividad```.\n    \n3. Ingresa la URL: `http://localhost:8080/hotel/actividades`.\n    \n4. Es necesario agregar un body y seleccionar ```x-www-form-urlencoded```.\n    \n5. Agregamos los campos necesarios para hecer el delete, además del campo de ```action``` y el de tipo ```delet```.\n        \n6. Guarda la petición.\n    \n\n---\n\n## 3\\. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará el insert de la actividade y las imprimirá en la consola de Intellij el mensaje.   \n- En la consola del servidor aparecerán los mensajes por ejemplo:\n    \n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 13:10:25 - servlet.ActividadesServlet.doPost]: \n \n✅ Actividad ELIMINADA correctamente\n \n 🚀🛸  || 🚧🛠️\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```\n\no\n\n``` shell\n🌌 ¡Operación exitosa! 🌟  O 💥 ERROR EN LA NAVE 🚨   - \n[2024-10-14 13:10:31 - servlet.ActividadesServlet.doPost]: \n \n❌ El ID de la actividad no existe.\n\n - - - - - - - END PRINT MESSAGE - - - - - - - \n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "The `/collections` endpoints let you manage your [collections](https://learning.postman.com/docs/sending-requests/intro-to-collections/).\n\nCrud"
+		},
+		{
+			"name": "Habitaciones",
+			"item": [
+				{
+					"name": "CreateHabitaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipoHabitacion",
+									"value": "sencilla",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "20.5",
+									"type": "text"
+								},
+								{
+									"key": "estadoHabitacion",
+									"value": "ocupada",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadHabitaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHabitaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipoHabitacion",
+									"value": "suite",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "20.5",
+									"type": "text"
+								},
+								{
+									"key": "estadoHabitacion",
+									"value": "mantenimiento",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteHabitaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The `/collections` endpoints let you manage your [collections](https://learning.postman.com/docs/sending-requests/intro-to-collections/).\n\nCrud"
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "ReadUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadUsuarios by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios?id=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUsuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "add",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Manuel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "manos@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUsuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Michael",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "manos@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUsuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inactivar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Manuel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Mano@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "inactivar",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The `/collections` endpoints let you manage your [collections](https://learning.postman.com/docs/sending-requests/intro-to-collections/).\n\nCrud"
+		},
+		{
+			"name": "Reservas Actividades",
+			"item": [
+				{
+					"name": "Get all reservas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reserva by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdActividad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdActividad",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "cancelado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdActividad",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "completado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "IdActividad",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "completado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservas Habitaciones",
+			"item": [
+				{
+					"name": "Habitacion reservas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habitacion reserva by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"type": "text"
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/01",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"type": "text"
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/28",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "reservado",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"type": "text"
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/28",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "completado",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"type": "text"
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/01",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "action",
+									"value": "cancelado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:8080/hotel/"
+		}
+	]
+}

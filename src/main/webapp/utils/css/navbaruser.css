@@ -1,0 +1,33 @@
+.navbar {
+    background: linear-gradient(0deg, rgba(253, 187, 45, 1) 5%, rgba(34, 193, 195, 1) 100%);
+}
+.navbar-brand {
+    font-size: 1.5rem; /* Tamaño de texto del logo */
+}
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000000 !important; /* Color blanco para enlaces */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.navbar-nav .nav-link.active {
+    color: #ffc107; /* Color diferente para la opción activa */
+    font-weight: bold; /* Aumentar peso del texto para el activo */
+}
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* Efecto hover */
+}
+.navbar-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn-outline-light {
+    border-color: #ffc107;
+    color: #ffc107;
+    transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}

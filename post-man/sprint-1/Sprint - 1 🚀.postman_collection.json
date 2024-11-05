@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "5793fe60-e06e-49b1-9509-b788290b08eb",
+		"name": "Sprint - 1 🚀",
+		"description": "### Tareas Realizadas\n\n1\\. **Instalación del Servidor de Aplicaciones**  \n\\- Se ha instalado un servidor de aplicaciones con Apache Tomcat y se ha visualizado el mensaje \"Hello World\".  \n\\- **Responsable:** Gustavo\n\n2\\. **Login**  \n\\- **GET:** Se ha realizado el forward a \\`login.jsp\\`.  \n\\- **POST:** Se han enviado 2 parámetros 'usu' y 'pass' y se han impreso por consola.  \n\\- **Responsable:** Gustavo\n\n3\\. **Actividades**  \n\\- **GET:** Se ha realizado un forward a \\`actividades.jsp\\`, pasando un atributo 'actividades' con un \\`ArrayList\\` de actividades.  \n\\- **POST:** Se han recuperado los parámetros para crear un nuevo objeto \\`Actividades\\`.  \n\\- **Responsable:** Gustavo\n\n4\\. **Habitaciones**  \n\\- **GET:** Se ha realizado un forward a \\`habitaciones.jsp\\`, pasando un atributo 'habitaciones' con un \\`ArrayList\\` de habitaciones.  \n\\- **POST:** Se han recuperado los parámetros para crear un nuevo objeto \\`Habitaciones\\`.  \n\\- **Responsable:** Gustavo\n\n5\\. **Admin**  \n\\- **GET:** Se ha realizado el forward a \\`admin.jsp\\`.  \n\\- **POST:** Se han recuperado todos los parámetros para actualizar un usuario.  \n\\- **Responsable:** Manuel\n\n6\\. **Registro**  \n\\- **GET:** Se ha realizado el forward a \\`registro.jsp\\`.  \n\\- **POST:** Se han recuperado los parámetros para crear un usuario.  \n\\- **Responsable:** Manuel\n\n7\\. **Reservas**  \n\\- **GET:** Se ha realizado un forward a \\`reservas.jsp\\`, pasando un atributo 'reservas' con un \\`ArrayList\\` de reservas.  \n\\- **POST:** Se han recuperado los parámetros para una nueva reserva.  \n\\- **Responsable:** Manuel\n\n8\\. **Acciones**  \n\\- **POST:** Se han creado los POST para actualizar y eliminar Actividades, Habitaciones y Reservas (utilizando un action). Se ha marcado como eliminado, sin eliminar.  \n\\- **Responsable:** Manuel\n\n9\\. **Refactorización**  \n\\- Se ha movido toda la lógica de los Servlets a la capa Controlador (Service).  \n\\- **Responsable:** Gustavo y Manuel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38376095",
+		"_collection_link": "https://hotel-abp1-g1.postman.co/workspace/ABP1-HOTEL~20cc75c3-5389-4f3b-b5f7-52ad82c5e837/collection/38376095-5793fe60-e06e-49b1-9509-b788290b08eb?action=share&source=collection_link&creator=38376095"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"login"
+							]
+						},
+						"description": "### 1\\. Configuración de la Solicitud GET\n\n- **Método**: GET\n    \n- **URL**: `http://localhost:8080/test/login`\n    \n- **Descripción**: Esta solicitud redirige (forward) a la página `login.jsp`, que muestra el formulario de inicio de sesión.\n    \n\n### 2\\. Crear la Solicitud en Postman\n\n1. Haz clic en **Añadir petición** y elige el método **GET** en su respectiva carpeta.\n    \n2. Ingresa la URL: `http://localhost:8080/test/login`.\n    \n3. Guarda la petición.\n    \n\n### 3\\. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud redirigirá a la página `login.jsp`.\n    \n- En la consola del servidor aparecerá el mensaje:\n    \n    - `GET desde login - Total Llamadas: X`."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "gusgonza",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"login"
+							]
+						},
+						"description": "### 1. Configuración de la Solicitud POST\n\n- **Método**: POST\n- **URL**: `http://localhost:8080/test/login`\n- **Descripción**: Esta solicitud envía dos parámetros, 'username' y 'password', que se imprimen en la consola del servidor\n\n### 2. Crear la Solicitud en Postman\n\n1. Haz clic en **Añadir petición** y selecciona el método **POST** en la carpeta correspondiente.\n2. Ingresa la URL: `http://localhost:8080/test/login`.\n3. Ve a la pestaña **Body** y selecciona **x-www-form-urlencoded**.\n4. Añade los siguientes parámetros:\n   - **Key**: `username`, **Value**: `gusgonza`\n   - **Key**: `password`, **Value**: `root`\n5. Guarda la petición.\n\n<img src=\"https://content.pstmn.io/301a09d8-559e-4802-9092-0bda55903ba9/aW1hZ2UucG5n\" width=\"332\" height=\"154\">\n\n\n### 3. Ejecución y Resultados Esperados\n\n- Al hacer clic en **Enviar**, la solicitud procesará los parámetros y los imprimirá en la consola del servidor.\n- En la consola del servidor aparecerán los mensajes:\n  - `\"POST desde login - Total Llamadas: X\"`\n  - `\"username: gusgonza\"`\n  - `\"password: root\"`\n\n\n<img src=\"https://content.pstmn.io/15915c95-1c64-43ad-be5c-c1d4423f2f55/aW1hZ2UucG5n\" width=\"307\" height=\"146\">"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actividades",
+			"item": [
+				{
+					"name": "actividades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							]
+						},
+						"description": "# Configuración GET para Actividades\n\n1. **Configuración de la Solicitud GET**\n   - **Método:** GET\n   - **URL:** `http://localhost:8080/test/actividades`\n   - **Descripción:** Esta solicitud redirige (forward) a la página `actividades.jsp`, que muestra la lista de actividades disponibles.\n\n2. **Crear la Solicitud en Postman**\n   - Haz clic en \"Añadir petición\" y elige el método GET en su respectiva carpeta.\n   - Ingresa la URL: `http://localhost:8080/hotel/actividades`.\n   - Guarda la petición.\n\n3. **Ejecución y Resultados Esperados**\n   - Al hacer clic en \"Enviar\", la solicitud redirigirá a la página `actividades.jsp`, mostrando la lista de actividades.\n   - En la consola del servidor aparecerá el mensaje: `GET desde actividades - Total Llamadas: X` y los objetos.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "actividades",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreActividad",
+									"value": "natacion",
+									"type": "text"
+								},
+								{
+									"key": "descripcionActividad",
+									"value": "natacion aire libre",
+									"type": "text"
+								},
+								{
+									"key": "precioActividad",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "cupoActividad",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "fechaActividad",
+									"value": "12-12-2024",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"description": "add/action/delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/actividades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"actividades"
+							]
+						},
+						"description": "# Configuración POST para Actividad\n\n1. **Configuración de la Solicitud POST**\n    \n    - **Método:** POST\n        \n    - **URL:** `http://localhost:8080/test/actividades`\n        \n    - **Descripción:** Esta solicitud recibe el nombre de una nueva actividad y la agrega a la lista de actividades.\n        \n2. **Crear la Solicitud en Postman**\n    \n    - Haz clic en \"Añadir petición\" y elige el método POST en su respectiva carpeta.\n        \n    - Ingresa la URL: `http://localhost:8080/test/actividades`.\n        \n    - En la sección de cuerpo (Body), selecciona `x-www-form-urlencoded` y añade los siguientes parámetros:\n        - **nombreActividad:** \\[nombre de la actividad\\]\n            \n        - **descripcionActividad:** \\[descripción de la actividad\\]\n            \n        - **precioActividad:** \\[precio de la actividad\\] (ejemplo: 100.0)\n            \n        - **cupoActividad:** \\[cupo disponible\\] (ejemplo: 10)\n            \n        - **fechaActividad:** \\[fecha de la actividad\\] (ejemplo: 01/01/2021)\n            \n    - Guarda la petición.\n        \n3. **Ejecución y Resultados Esperados**\n    \n    - Al hacer clic en \"Enviar\", la actividad será agregada a la lista.\n        \n    - La solicitud redirigirá a la página `actividades.jsp`.\n        \n    - En la consola del servidor aparecerá el mensaje indicando que se ha agregado una nueva actividad."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habitaciones",
+			"item": [
+				{
+					"name": "habitaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							]
+						},
+						"description": "# **Configuración GET para Habitaciones**\n\n1. **Configuración de la Solicitud GET**\n    \n    - **Método:** GET\n        \n    - **URL:** `http://localhost:8080/hotel/habitaciones`\n        \n    - **Descripción:** Esta solicitud redirige (forward) a la página `habitaciones.jsp`, que muestra la lista de habitaciones disponibles.\n        \n2. **Crear la Solicitud en Postman**\n    \n    - Haz clic en \"Añadir petición\" y elige el método GET en su respectiva carpeta.\n        \n    - Ingresa la URL: `http://localhost:8080/hotel/habitaciones`.\n        \n    - Guarda la petición.\n        \n3. **Ejecución y Resultados Esperados**\n    \n    - Al hacer clic en \"Enviar\", la solicitud redirigirá a la página `habitaciones.jsp`, mostrando la lista de habitaciones.\n        \n    - En la consola del servidor aparecerá el mensaje: `GET desde habitaciones - Total Llamadas: X` y los objetos de las habitaciones.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "habitaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipoHabitacion",
+									"value": "SENCILLA",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1111",
+									"type": "text"
+								},
+								{
+									"key": "estadoHabitacion",
+									"value": "OCUPADA",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"description": "add/update/delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitaciones"
+							]
+						},
+						"description": "# **Configuración POST para Habitaciones**\n\n1. **Configuración de la Solicitud POST**\n    \n    - **Método:** POST\n        \n    - **URL:** `http://localhost:8080/hotel/habitaciones`\n        \n    - **Descripción:** Esta solicitud envía datos para crear una nueva habitación y redirige (forward) a la página `habitaciones.jsp`, que muestra la lista de habitaciones actualizada.\n        \n2. **Crear la Solicitud en Postman**\n    \n    - Haz clic en \"Añadir petición\" y elige el método POST en su respectiva carpeta.\n        \n    - Ingresa la URL: `http://localhost:8080/hotel/habitaciones`.\n        \n    - En la pestaña \"Body\", selecciona \"x-www-form-urlencoded\" e ingresa los siguientes parámetros:\n        - `id`: [ID de la habitación]\n        - `tipo`: [Tipo de la habitación (SENCILLA, DOBLE, SUITE)]\n        - `precio`: [Precio de la habitación]\n        - `estado`: [Estado de la habitación (DISPONIBLE, OCUPADA, MANTENIMIENTO)]\n    \n    - Guarda la petición.\n        \n3. **Ejecución y Resultados Esperados**\n    \n    - Al hacer clic en \"Enviar\", la solicitud creará una nueva habitación con los datos proporcionados y redirigirá a la página `habitaciones.jsp`, mostrando la lista de habitaciones actualizada.\n        \n    - En la consola del servidor aparecerá el mensaje: `POST desde habitaciones - Total Llamadas: X` y los objetos de las habitaciones.\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"admin"
+							]
+						},
+						"description": "# **Configuración GET para Admin**\n\n1. **Configuración de la Solicitud GET**\n    \n    - **Método:** GET\n        \n    - **URL:** `http://localhost:8080/hotel/admin`\n        \n    - **Descripción:** Esta solicitud redirige (forward) a la página `admin.jsp`, que muestra la interfaz de administración con opciones para gestionar el hotel.\n        \n2. **Crear la Solicitud en Postman**\n    \n    - Haz clic en \"Añadir petición\" y elige el método GET en su respectiva carpeta.\n        \n    - Ingresa la URL: `http://localhost:8080/hotel/admin`.\n        \n    - Guarda la petición.\n        \n3. **Ejecución y Resultados Esperados**\n    \n    - Al hacer clic en \"Enviar\", la solicitud redirigirá a la página `admin.jsp`, mostrando las opciones de administración del hotel.\n        \n    - En la consola del servidor aparecerá el mensaje: `GET desde admin - Total Llamadas: X`."
+					},
+					"response": []
+				},
+				{
+					"name": "admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idUser",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"admin"
+							]
+						},
+						"description": "# **Configuración POST para Admin**\n\n1. **Configuración de la Solicitud POST**\n    \n    - **Método:** POST\n        \n    - **URL:** `http://localhost:8080/hotel/admin`\n        \n    - **Descripción:** Esta solicitud envía el parámetro `idAdmin` al servidor, que luego procesa y reenvía a la página `admin.jsp`. Además, imprime el `idAdmin` recibido en la consola del servidor.\n        \n2. **Crear la Solicitud en Postman**\n    \n    - Haz clic en \"Añadir petición\" y elige el método POST en su respectiva carpeta.\n        \n    - Ingresa la URL: `http://localhost:8080/hotel/admin`.\n        \n    - En la pestaña **Body**, selecciona `x-www-form-urlencoded` y agrega el parámetro:\n        \n        - **Clave:** `idAdmin`\n            \n        - **Valor:** (Ingresa un valor de prueba, como `123`).\n            \n    - Guarda la petición.\n        \n3. **Ejecución y Resultados Esperados**\n    \n    - Al hacer clic en \"Enviar\", el servidor recibirá el parámetro `idAdmin` y lo imprimirá en la consola.\n        \n    - La solicitud redirigirá (forward) a la página `admin.jsp`.\n        \n\n<img src=\"https://content.pstmn.io/a0c7e949-1c81-4031-ab63-6d764fd91d97/aW1hZ2UucG5n\" alt=\"\" height=\"181\" width=\"309\">"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registro",
+			"item": [
+				{
+					"name": "registro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"registro"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Mano",
+									"disabled": true
+								},
+								{
+									"key": "rol",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "manogirgis@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "01/01/2024",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Mano",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "manogirgis0@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservas",
+			"item": [
+				{
+					"name": "reservashabitaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							],
+							"query": [
+								{
+									"key": "IdReserva",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"disabled": true
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/01",
+									"disabled": true
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reservashabitaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReserva",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdHabitacion",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaEntrada",
+									"value": "2024/01/01",
+									"type": "text"
+								},
+								{
+									"key": "FechaSalida",
+									"value": "2025/01/01",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"description": "add/delete/update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/habitacionReserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"habitacionReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reservasActividad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							],
+							"query": [
+								{
+									"key": "IdReservasActividad",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "IdActividad",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reservasActividad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdReservasActividad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdUsuario",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdActividad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "cancelado",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "add",
+									"description": "update/add/delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/hotel/reservaactividad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hotel",
+								"reservaactividad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

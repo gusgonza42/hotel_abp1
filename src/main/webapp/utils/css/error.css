@@ -1,0 +1,32 @@
+.container-error {
+    max-width: 50%;
+    width: 50%;
+}
+.error-card {
+    background-color: #ffe5e5;
+    border: none;
+    padding: 30px;
+    border-radius: 15px;
+}
+.error-icon {
+    font-size: 3rem;
+    color: #e74c3c;
+}
+.display-5 {
+    font-size: 2.5rem;
+    color: #333;
+}
+.error-message {
+    color: #c0392b;
+    font-weight: 500;
+}
+.btn-back {
+    background-color: rgb(34,193,195,1);
+    color: #fff;
+    border-radius: 10px;
+}
+.btn-back:hover {
+    background: rgb(253, 187, 55);
+
+    color: #fff;
+}

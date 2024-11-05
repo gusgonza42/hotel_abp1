@@ -1,0 +1,82 @@
+
+
+/* Asegura que el contenedor ocupe toda la altura de la pantalla */
+.container-fluid-register {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Asegura que cada lado ocupe el 50% en pantallas medianas y mayores */
+.image-side, .form-side {
+    height: 100vh;
+    width:100%;
+}
+
+/* Imagen de la sección izquierda */
+.image-side img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Formulario centrado verticalmente en la mitad derecha */
+.form-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(253, 187, 55);
+    width: 50%;
+}
+
+/* Card del formulario con altura máxima y centrado */
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.bot-on{
+    background: rgb(34,193,195,1) !important;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo responsivo */
+.logo-image {
+    width: 80px; /* Tamaño base pequeño */
+    max-width: 150px;
+}
+
+@media (min-width: 768px) {
+    .logo-image {
+        width: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo-image {
+        width: 150px;
+    }
+}
+
+/* En pantallas pequeñas, oculta la imagen */
+@media (max-width: 950px) {
+    .image-side {
+        display: none;
+    }
+    .form-side {
+        width: 100%;
+        padding: 1rem;
+        height: 100vh;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+}

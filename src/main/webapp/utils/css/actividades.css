@@ -1,0 +1,57 @@
+.card {
+    width: 100%;
+    height: 100%; /* tamaño de la card */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container-actividades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.actividades-disponibles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+/* Estructura de saludo y botones */
+.saludo-botones-actividades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: #a4ada9;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Alineación centrada para el saludo y estado */
+.saludo-container {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.estado-usuario {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #666;
+}

@@ -1,0 +1,13 @@
+/* Estructura de saludo y botones */
+.saludo-botones-habitaciones {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #0c4128;
+}
+
+.saludo-botones-habitaciones h2 {
+    color: black;
+    font-size: 1.5em;
+}

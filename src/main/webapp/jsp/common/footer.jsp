@@ -1,0 +1,1 @@
+<!-- Footer section for the hotel website -->
