@@ -45,7 +45,7 @@ Este proyecto es un aplicativo web para la gestión de un hotel, con dos tipos d
 
 - Tests y pruebas prácticas de validación de cada una de las unidades formativas trabajadas, con resultado APTO o NO
   APTO.
-- Una vez que todas las pruebas de validación son APTOS, el alumno obtiene la nota correspondiente al proyecto.
+- Una vez que todas las pruebas de validación son APTOS, el alumno obtiene la nota correspondiente al proyecto  .
 - Los alumnos NO APTOS deben repetir y realizar la prueba de validación de recuperación, demostrando que han adquirido
   los conocimientos.
 
