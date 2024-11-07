@@ -57,7 +57,7 @@ Este proyecto es un aplicativo web para la gestión de un hotel, con dos tipos d
 
 ### Sprint 3 - Interficie de usuario 💻
 
-### Sprint 4 - Documentación 📚
+### Sprint 4 - React Native 📚
 
 <div style="text-align: center;">
     <img src="utils/logo.png" alt="Logo del Hotel" width="150" height="150" style="display: inline-block;" />
